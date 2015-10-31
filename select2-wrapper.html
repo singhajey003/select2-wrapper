@@ -41,7 +41,7 @@ Example:
   </style>
 
   <template>
-    <select id="select2-wrapper-tag" style="width: 100%">
+    <select id="select2-wrapper-tag" style="width: 100%" multiple="multiple">
       <template is="dom-repeat" items="{{model}}">
         <option value="{{item.value}}">{{item.label}}</option> 
       </template>
@@ -60,7 +60,7 @@ Example:
       if (data){
         $(document).ready(function () {
           $("#select2-wrapper-tag").select2({
-            data: data
+            data: data.push
           });
         });
       }
